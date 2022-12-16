@@ -1,8 +1,6 @@
 asyncio
 configparser
-sqlite3
 pathlib
 aiogram
 logging
-time
 datetime
