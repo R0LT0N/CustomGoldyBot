@@ -4,7 +4,6 @@ from pathlib import Path
 from aiogram import *
 from aiogram.dispatcher.filters.state import StatesGroup, State
 from aiogram.types import InputFile, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-import logging
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
 from aiogram.utils.exceptions import CantParseEntities
@@ -16,9 +15,7 @@ from utils.sql_api import *
 # конфиг для всего
 config = configparser.ConfigParser()
 config.read("config.ini", encoding="utf-8")
-
 # Логирование, аиограм бот, хранилище
-logging.basicConfig(level=logging.INFO)
 storage = MemoryStorage()
 bot = Bot(token=config['SETTINGS']['TOKEN'])
 dp = Dispatcher(bot, storage=MemoryStorage())
